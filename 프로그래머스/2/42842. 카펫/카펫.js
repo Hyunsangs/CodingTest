@@ -1,16 +1,10 @@
 function solution(brown, yellow) {
-
-    let size = brown + yellow;
-    let maxRow = brown / 2 - 1;
-    let minCol = 3;
-    
-    while( true ) {
-        if ( maxRow * minCol === size) {
-            return [ maxRow, minCol]
-        } else {
-            maxRow--
-            minCol++
+    var answer = [];
+    for (var i = 3; i <= (brown+yellow)/i; i++) {
+        var x = Math.floor((brown+yellow)/i);
+        if( (x-2)*(i-2)=== yellow) {
+            return [x,i];
         }
     }
-    
+
 }
