@@ -1,6 +1,6 @@
 function solution(n, lost, reserve) {
     // 여분의 체육복이 있지만 도난당한 학생을 처리
-    let realLost = lost.filter(l => !reserve.includes(l));
+    let realLost = lost.filter(l => !reserve.includes(l)); // O(k * n)
     let realReserve = reserve.filter(r => !lost.includes(r));
 
     // 체육복을 빌려줄 수 있는 경우를 처리
